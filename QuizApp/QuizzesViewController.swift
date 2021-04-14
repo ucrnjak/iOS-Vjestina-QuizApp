@@ -26,6 +26,7 @@ class QuizzesViewController: UIViewController, ConstraintRelatableTarget {
     override func viewDidLoad() {
         super.viewDidLoad()
         assignbackground()
+        quizes = DataService().fetchQuizes()
         for quiz in quizes {
             if quiz.category == .sport {
                 quizesByCategory[0].append(quiz)
